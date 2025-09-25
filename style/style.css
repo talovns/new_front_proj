@@ -211,12 +211,19 @@ body {
 
 
 .product-card {
-    background: rgba(255, 255, 255, 0.61);
+    background: #445c74;
     padding: 25px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
 }
 
 .product-card:hover {
@@ -224,11 +231,11 @@ body {
 }
 
 .products-grid {
-    display: grid
-;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
     gap: 30px;
     margin-top: 30px;
+    margin: 30px 100px;
 }
 
 .contacts-container {
@@ -290,6 +297,27 @@ p {
     text-align: center;
     margin-bottom: 30px;
     font-weight: 300;
+}
+
+.price{
+    background: #b1d0df;
+    text-align: center;
+    border-radius: 15px;
+    flex-grow: 1; /* Заставляет блок цены занимать всё доступное пространство */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+.goodsimg {
+    margin-bottom: 20px; /* Отступ между фото и текстом */
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 10px;
 }
 
 
