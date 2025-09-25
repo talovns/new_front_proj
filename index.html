@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MainPortfolioPage</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-    <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="pages/news.html">Новости</a></li>
-                <li><a href="pages/practices.html">Практики</a></li> 
-                <li><a href="pages/goods.html">Товары</a></li>
-                <li><a href="pages/contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <p>Информация об авторе</p>
-            <img src="images/photo.png" alt="Фото автора" width="200" height="250">
-            <p>Иванов Иван Иванович</p>
-            <p>ЭФБО-00-00</p>
-            <p>Обо мне: Я родился в Москве в 70-м на краю города. Глупость рано ударила в голову. В четыре активно ругался.
-Потом школа, форма, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.</p>
-            <div>19 лет подряд ношу имя Никита</div>
-            <div>Поступил в МИРЭА</div>
-            <div>Умею завязывать шнурки</div>
-            <div>Могу без мамы спросить кто последний в очереди</div>
-            <div>
-                Мой опыт работы:
-                <div>
-                    Опыт 1<br>
-                    Скролил ленту инсты и шарю за абоюдно.    
-                </div>
-                <div>
-                    Опыт 2<br>
-                    Состоял в киберспортивной организации, состоящей из двух человек.
-                </div>
-                <div>
-                    Опыт 3<br>
-                    Добывал уголь в шахте на камчатке.
-                </div>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+         <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+                </ul>
             </div>
+        <div class="content">
+            <div class="profile-header">
+                    <h1 class="profile-title">Информация об авторе</h1>
+                    <img class="profile-photo" src="images/photo.png" alt="Фото автора" width="200" height="250">
+                    <h2 class="profile-name">Талов Никита Сергеевич</h2>
+                    <p class="profile-group">ЭФБО-04-24</p>
+                </div>
+
+                <div class="about-me">
+                    <p>Обо мне: Я родился в Москве в 70-м на краю города. Глупость рано ударила в голову. В четыре активно ругался.
+                    Потом школа, форма, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.</p>
+                </div>
+
+            <div class="skill-tag">19 лет подряд ношу имя Никита</div><br>
+            <div class="skill-tag">Поступил в МИРЭА</div><br>
+            <div class="skill-tag">Умею завязывать шнурки</div><br>
+            <div class="skill-tag">Могу без мамы спросить кто последний в очереди</div><br>
+
+
+            <div class="experience-section">
+                    <h2 class="section-title">Мой опыт работы</h2>
+                    <div class="experience-card">
+                        <h3 class="experience-title">Опыт 1</h3>
+                        <p class="experience-desc">Скролил ленту инсты и шарю за абоюдно.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3 class="experience-title">Опыт 2</h3>
+                        <p class="experience-desc">Состоял в киберспортивной организации, состоящей из двух человек.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3 class="experience-title">Опыт 3</h3>
+                        <p class="experience-desc">Добывал уголь в шахте на камчатке.</p>
+                    </div>
+                </div>
         </div>
-        <div id="footer">Футер</div> 
+        <div class="footer">Футер</div>
+    </div>
 
 </body>
+
 </html>
