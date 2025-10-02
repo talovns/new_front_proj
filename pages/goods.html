@@ -10,7 +10,9 @@
 
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
+        <header class="header"> <!-- Было: <div class="header"> -->
+            <h1>Хэдер</h1> <!-- Добавили заголовок для семантики -->
+        </header>
         <div class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
@@ -20,35 +22,44 @@
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </div>
-        <div class="products-grid">
-            <div class="product-card">
-                <img class="goodsimg" src="../images/impala.png" alt="фото товара" width="200" height="250">
-                <div class="price">
-                <h1>шевроле импала 1969г </h1> <br>
-                <h3>цена: 150000000000000000$</h3><br>
+        <main class="content">
+            <div class="products-grid">
+                <div class="product-card">
+                    <img class="goodsimg" src="../images/impala.png" alt="фото товара" width="200" height="250">
+
+                    <div class="price">
+                        <h1>шевроле 1969г </h1>
+                        <h3>цена:</h3>
+                        <h3 class="pricetext">1345000000$</h3>
+                    </div>
+
                 </div>
-                
-            </div>
-            <div class="product-card">
-                <img class="goodsimg" src="../images/posrhe.png" alt="фото товара" width="200" height="250">
-                
-                <div class="price">
-                <h1>порш 1999г </h1> <br>
-                <h3>цена: 10000000000000000$</h3><br>
-                </div> 
-            </div>
-            <div class="product-card">
-                <img class="goodsimg" src="../images/cadilac.png" alt="фото товара" width="200" height="250">
-                <div class="price">
-                <h1>кадилак 1969г </h1> <br>
-                <h3>цена: 134534530000000000000$</h3><br>
+                <div class="product-card">
+                    <img class="goodsimg" src="../images/posrhe.png" alt="фото товара" width="200" height="250">
+
+                    <div class="price">
+                        <h1>порш 1999г </h1>
+                        <h3>цена:</h3>
+                        <h3 class="pricetext">1345000000$</h3>
+                    </div>
                 </div>
-                
+                <div class="product-card">
+                    <img class="goodsimg" src="../images/cadilac.png" alt="фото товара" width="200" height="250">
+                    <div class="price">
+                        <h1>кадилак 1969г </h1>
+                        <h3>цена:</h3>
+                        <h3 class="pricetext">1345000000$</h3>
+                    </div>
+
+                </div>
             </div>
-        </div>
-        
+        </main>
+
+
     </div>
-    <div class="footer">Футер</div>
+    <footer class="footer">
+        <p>Футер</p>
+    </footer>
 
 </body>
 
