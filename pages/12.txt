@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPortfolioPage</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="header"> <!-- Было: <div class="header"> -->
+            <h1>Хэдер</h1> <!-- Добавили заголовок для семантики -->
+        </header>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <main class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="products-grid">
+                <div class="product-card">
+                    <img class="goodsimg" src="../images/impala.png" alt="фото товара" width="200" height="250">
+
+                    <div class="price">
+                        <h1>шевроле 1969г </h1>
+                        <h3>цена:</h3>
+                        <h3 class="pricetext">1345000000$</h3>
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <img class="goodsimg" src="../images/posrhe.png" alt="фото товара" width="200" height="250">
+
+                    <div class="price">
+                        <h1>порш 1999г </h1>
+                        <h3>цена:</h3>
+                        <h3 class="pricetext">1345000000$</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img class="goodsimg" src="../images/cadilac.png" alt="фото товара" width="200" height="250">
+                    <div class="price">
+                        <h1>кадилак 1969г </h1>
+                        <h3>цена:</h3>
+                        <h3 class="pricetext">1345000000$</h3>
+                    </div>
+
+                </div>
+            </div> -->
+        </main>
+
+
+    </div>
+    <footer class="footer">
+        <p>Футер</p>
+    </footer>
+
+</body>
+
+</html>
