@@ -9,43 +9,85 @@
 </head>
 
 <body>
-    <div class="page-container">
-        <header class="header"> <!-- Было: <div class="header"> -->
-            <h1>Хэдер</h1> <!-- Добавили заголовок для семантики -->
-        </header>
+    <header class="header">
+        <h1 class="header__title">Мой Портфолио</h1>
+        <p>Студент разработчик</p>
+    </header>
+    <div class="page">
+
         <div class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item "><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div><br>
-        <div class="content">
-            <div class="news-container">
-                <div class="news-card">
-                    <h1>Новости в Италии</h1> <br>
-                    <h4><em>01.01.2025 12:00 Н.С. Талов</em></h4>
-                    <h3>Талов Никита как обычно выиграл гонку формулы 1 и сейчас дает интервью для журналистов!</h3><br>
-                </div><br>
-                <div class="news-card">
-                    <h1>Новости в омерике</h1> <br>
-                    <h4><em>01.01.2025 12:00 Н.С. Талов</em></h4>
-                    <h3>Талов Никита как обычно выиграл финал нба и сейчас дает интервью для журналистов!</h3><br>
-                </div><br>
-                <div class="news-card">
-                    <h1>Новости в РОССИИ ZZZ</h1> <br>
-                    <h4><em>01.01.2025 12:00 Н.С. Талов</em></h4>
-                    <h3>Талов Никита как обычно выиграл кубов кхл и сейчас дает интервью для журналистов!</h3><br>
-                </div><br>
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Сменить тему"></button>
+        </div>
+
+        <div class="news">
+            <main class="main">
+                <div class="news__list">
+                    <div class="news-item">
+                        <section class="news__title">
+                            Новости в Италии
+                        </section>
+                        <section class="news-item__title">
+                            Талов Никита как обычно выиграл гонку формулы 1 и сейчас дает интервью для журналистов!
+                        </section>
+                        <h4><em class="news-item__date">01.01.2025 12:00</em></h4>
+                        <h4><em class="news-item__date">Талов Н.С.</em></h4>
+
+                    </div>
+                    <div class="news-item">
+                        <section class="news__title">
+                            Новости в Италии
+                        </section>
+                        <section class="news-item__title">
+                            Талов Никита как обычно выиграл финал нба и сейчас дает интервью для журналистов!
+                        </section>
+                        <h4><em class="news-item__date">01.01.2025 12:00</em></h4>
+                        <h4><em class="news-item__date">Талов Н.С.</em></h4>
+
+                    </div>
+                    <div class="news-item">
+                        <section class="news__title">
+                            Новости в Италии
+                        </section>
+                        <section class="news-item__title">
+                            Талов Никита как обычно выиграл кубов кхл и сейчас дает интервью для журналистов!
+                        </section>
+                        <h4><em class="news-item__date">01.01.2025 12:00</em></h4>
+                        <h4><em class="news-item__date">Талов Н.С.</em></h4>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+
+
+    </div>
+    <footer class="footer">
+        <div>
+            <div>
+                <div>
+                    <p>&copy; 2024 Портфолио студента. Все права защищены.</p>
+                </div>
+                <div>
+                    <a>Контакты</a>
+                    <a>Политика конфиденциальности</a>
+                </div>
             </div>
         </div>
-    </div>
-        <footer  class="footer">
-            <p>Футер</p>
-        </footer>
-    
+    </footer>
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('theme-dark');
+        });
+    </script>
 
 </body>
 

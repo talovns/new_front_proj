@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
     <link rel="stylesheet" href="../style/style.css">
+
+
     <style>
         /* Стили для модального окна */
+        :root {
+            --color-modal_back: rgba(255, 255, 255, 0.733);
+            --color-modal-value_back: rgb(255, 255, 255);
+            --color-text_dialog: rgb(122, 122, 122);
+        }
+
+        .body {
+            color: var(--color-text_dialog);
+        }
+
         dialog::backdrop {
             background: rgba(0, 0, 0, 0.6);
             animation: fadeIn 0.3s ease;
+        }
+
+        .modal-back {
+            background: var(--color-modal-value_back);
+            color: var(--color-text_dialog);
+        }
+
+
+
+
+        dialog[open] {
+            margin: auto;
         }
 
         dialog {
@@ -41,6 +65,7 @@
 
         .modal-content {
             padding: 2rem;
+            background: var(--color-modal_back);
         }
 
         .form-group {
@@ -51,7 +76,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--color-text_dialog);
         }
 
         .form-group input,
@@ -85,39 +110,10 @@
             margin-top: 2rem;
         }
 
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: #f8f9fa;
-            color: #2c3e50;
-            border: 2px solid #e9ecef;
-        }
-
-        .btn-secondary:hover {
-            background: #e9ecef;
-        }
-
         .required {
             color: #e74c3c;
         }
+
 
         @keyframes fadeIn {
             from {
@@ -156,40 +152,90 @@
                 width: 100%;
             }
         }
+
+        #phone::placeholder {
+            color: var(--color-text_dialog);
+            opacity: 1;
+
+        }
+
+        #email::placeholder {
+            color: var(--color-text_dialog);
+            opacity: 1;
+
+        }
+
+        #name::placeholder {
+            color: var(--color-text_dialog);
+            opacity: 1;
+
+        }
+
+        #message::placeholder {
+            color: var(--color-text_dialog);
+            opacity: 1;
+
+        }
+
+
+        body.theme-dark {
+            --color-modal_back: rgb(97, 97, 97);
+            --color-modal-value_back: rgba(182, 182, 182, 0.466);
+            --color-text_dialog: rgb(255, 255, 255);
+        }
     </style>
 </head>
 
 <body>
-    <div class="page-container">
-        <header class="header"> <!-- Было: <div class="header"> -->
-            <h1>Хэдер</h1> <!-- Добавили заголовок для семантики -->
-        </header>
+    <header class="header">
+        <h1 class="header__title">Мой Портфолио</h1>
+        <p>Студент разработчик</p>
+    </header>
+    <div class="page">
+
         <div class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Сменить тему"></button>
         </div>
 
-        <main class="content">
-            <div class="contacts-container">
-                <h2 class="section-title">Контакты</h2>
-                <div class="contact-info">
-                    <p>почта: ubivater228@mail.ru</p>
+        <main class="main">
+            <section class="contacts">
+                <h2 class="contacts__title">Контакты</h2>
+                <div class="contacts__list">
+                    <div class="contact-item ">
+                        <p class="contact-item__value">
+                            <a href="mailto:ubivater228@mail.ru">ubivater228@mail.ru</a>
+                        </p>
+                    </div>
+                    <div class="contact-item ">
+                        <p class="contact-item__value">
+                            <a>Ул.Пушкина, д.Колотушкина</a>
+                        </p>
+                    </div>
+                    <button class="btn btn--primary" onclick="contactModal.showModal()">Связаться с нами</button>
                 </div>
-                <div class="contact-info">
-                    <p>Ул.Пушкина, д.Колотушкина</p>
-                </div>
-
-                <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
-            </div>
+            </section>
         </main>
+
     </div>
     <footer class="footer">
-        <p>Футер</p>
+        <div>
+            <div>
+                <div>
+                    <p>&copy; 2024 Портфолио студента. Все права защищены.</p>
+                </div>
+                <div>
+                    <a>Контакты</a>
+                    <a>Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Модальное окно для формы обратной связи -->
@@ -202,22 +248,24 @@
             <form id="feedbackForm" method="dialog">
                 <div class="form-group">
                     <label for="name">Имя <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    <input class="modal-back" type="text" id="name" name="name" required placeholder="Введите ваше имя">
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Телефон <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    <input class="modal-back" type="tel" id="phone" name="phone" required
+                        placeholder="+7 (XXX) XXX-XX-XX">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Электронная почта <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                    <input class="modal-back" type="email" id="email" name="email" required
+                        placeholder="example@mail.ru">
                 </div>
 
                 <div class="form-group">
                     <label for="category">Категория обращения <span class="required">*</span></label>
-                    <select id="category" name="category" required>
+                    <select class="modal-back" id="category" name="category" required>
                         <option value="">Выберите категорию</option>
                         <option value="technical">Техническая поддержка</option>
                         <option value="commercial">Коммерческое предложение</option>
@@ -230,15 +278,15 @@
 
                 <div class="form-group">
                     <label for="message">Текст обращения <span class="required">*</span></label>
-                    <textarea id="message" name="message" required
+                    <textarea class="modal-back" id="message" name="message" required
                         placeholder="Опишите вашу проблему или вопрос..."></textarea>
                 </div>
 
                 <div class="modal-actions">
                     <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-                    <button type="button" class="btn btn-secondary" onclick="contactModal.close()">Отмена</button>
+                    <button type="button" class="btn btn--secondary" onclick="contactModal.close()">Отмена</button>
                     <!-- Кнопка отправки с обработкой через JavaScript -->
-                    <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                    <button type="button" class="btn btn--primary" onclick="submitForm()">Отправить</button>
                 </div>
             </form>
         </div>
@@ -292,6 +340,14 @@
             }
         });
     </script>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('theme-dark');
+        });
+    </script>
+
+
 </body>
 
 </html>

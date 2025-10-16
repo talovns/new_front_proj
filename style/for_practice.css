@@ -1,0 +1,89 @@
+:root {
+  --nav-text-color: rgb(37, 37, 37);
+  --nav-text-color-hover: rgb(71, 71, 71);
+  --nav-text-border-color: rgb(192, 192, 192);
+
+
+  --nav-text-border-size: 2px;
+  --nav-text-size: 32px;
+  --nav-text-size-active: 38px;
+}
+
+.text-color-gray {
+  color: var(--nav-text-color);
+  -webkit-text-stroke: var(--nav-text-border-color) var(--nav-text-border-size);
+  font-weight: 1000;
+  opacity: 50%;
+  font-size: var(--nav-text-size);
+}
+
+.text-color-gray:hover {
+  color: var(--nav-text-color-hover);
+}
+
+.active-my-page {
+  color: var(--nav-text-color);
+  -webkit-text-stroke: var(--nav-text-border-color) var(--nav-text-border-size);
+  font-weight: 1000;
+  opacity: 50%;
+  font-size: var(--nav-text-size-active);
+}
+
+.active-my-page:hover {
+  color: var(--nav-text-color-hover);
+}
+
+
+
+.header-avatar{
+  /* Сброс того, что даёт .ratio > *  */
+  top: auto;                 /* важно! иначе будет «прибито» к верху */
+  width: 140px; height: 140px;
+
+  /* Позиция: у нижней кромки хедера, со смещением на пол-аватара вниз */
+  bottom: 0;                 /* в ноль к нижнему краю видео */
+  left: 2rem;                /* отступ от левого края — подбери как нужно */
+  transform: translateY(50%);/* +50% = половина будет на белой части */
+
+  /* по желанию: курсор/клик и т.п. */
+  /* pointer-events: none; */
+}
+
+/* Адаптив — на десктопе можно подвинуть/увеличить */
+@media (min-width: 992px){
+  .header-avatar{
+    left: 12%;
+    width: 100px; height: 100px;
+  }
+  :root{
+ --nav-text-size: 22px;
+  --nav-text-size-active: 28px;
+  }
+   
+}
+
+
+
+
+/* 1) Шрифт */
+@font-face{
+  font-family: "BBHSansBartle";
+  src: url("../fonts/BBHSansBartle-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2) Применяем именно к navbar */
+.navbar,
+.navbar-brand,
+.navbar-nav .nav-link{
+  font-family: "BBHSansBartle", var(--bs-font-sans-serif);
+}
+
+/* 3) Порядок аргументов у обводки букв — сначала ширина, потом цвет */
+.navbar .nav-link{
+  -webkit-text-stroke: var(--nav-text-border-size) var(--nav-text-border-color);
+  /* opacity пиши как 0..1 */
+  opacity: 0.5;
+}
